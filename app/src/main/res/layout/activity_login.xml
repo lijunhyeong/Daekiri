@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/edittext_stroke"
+        android:hint="이메일"
+        android:singleLine = "true"
+        android:textColorHint="@color/darkGray"
+        android:padding="7dp"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginImage" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/edittext_stroke"
+        android:hint="비밀번호"
+        android:textColorHint="@color/darkGray"
+        android:inputType="textPassword"
+        android:padding="7dp"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/idEditText"
+        app:layout_constraintStart_toStartOf="@+id/idEditText"
+        app:layout_constraintTop_toBottomOf="@+id/idEditText" />
+
+    <TextView
+        android:id="@+id/findPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/applesdgothicneom"
+        android:onClick="findPasswordButton"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/MyColor"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_mycolor_radius"
+        android:onClick="loginButton"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@id/findPasswordButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_stroke_login"
+        android:onClick="createAccountButton"
+        android:text="회원가입"
+        android:textColor="@color/MyColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/loginButton"
+        app:layout_constraintStart_toStartOf="@id/loginButton"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

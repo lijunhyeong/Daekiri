@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="210dp"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/entranceYearTextView"
+        android:layout_width="240dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="@string/entranceYear"
+        android:textColor="@color/MyColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <NumberPicker
+        android:id="@+id/yearpicker_datepicker"
+        android:layout_width="63dp"
+        android:layout_height="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entranceYearTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/closeEntranceYearButton"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_stroke_login"
+            android:fontFamily="@font/applesdgothicneom"
+            android:text="취소"
+            android:textColor="@color/MyColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/entranceYearTextView"
+            app:layout_constraintTop_toBottomOf="@+id/yearpicker_datepicker"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/successEntranceYearButton"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_mycolor_radius"
+            android:fontFamily="@font/applesdgothicneom"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/entranceYearTextView"
+            app:layout_constraintTop_toBottomOf="@+id/yearpicker_datepicker"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/lightGray"
+    app:cardElevation = "10dp"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cardProfileImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/menprofile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="25세"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardProfileImage"
+            tools:text="25세" />
+
+        <TextView
+            android:id="@+id/cardMajor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중국어학과"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/cardAge"
+            app:layout_constraintTop_toBottomOf="@id/cardAge"
+            tools:text="중국어학과" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="right"
+            android:text="워니"
+            app:layout_constraintBottom_toBottomOf="@id/cardProfileImage"
+            app:layout_constraintEnd_toEndOf="@id/cardMajor"
+            app:layout_constraintStart_toEndOf="@id/cardProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/cardMajor"
+            tools:text="워니" />
+
+        <View
+            android:id="@+id/cardDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/darkGray"
+            app:layout_constraintEnd_toEndOf="@id/cardName"
+            app:layout_constraintStart_toStartOf="@id/cardProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/cardName" />
+
+        <LinearLayout
+            android:id="@+id/cardTeach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/cardDivider"
+            app:layout_constraintStart_toStartOf="@id/cardDivider"
+            app:layout_constraintTop_toBottomOf="@+id/cardDivider">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:background="@color/MyColor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="멘토"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardTeachItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="중국어"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardTeachItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="태권도"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardTeachItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="피아노"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cardLearn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/cardTeach"
+            app:layout_constraintStart_toStartOf="@+id/cardTeach"
+            app:layout_constraintTop_toBottomOf="@+id/cardTeach">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/MyColor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="멘티"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardLearnItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="헬스"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardLearnItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="토익 스피킹"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardLearnItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="안드로이드 앱"
+                android:textColor="@color/darkGray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardMate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cardLearn"
+            app:layout_constraintStart_toStartOf="@+id/cardLearn"
+            app:layout_constraintTop_toBottomOf="@+id/cardLearn">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:background="@drawable/mate_stroke_mycolor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="메이트"
+                android:textColor="@color/MyColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardMateItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="홈런볼"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardMateItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="더 노벰버"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cardMateItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="산책"
+                android:textColor="@color/darkGray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="name"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+    </LinearLayout>
+    -->
+
+</com.google.android.material.card.MaterialCardView>

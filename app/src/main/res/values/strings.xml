@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">대끼리</string>
+
+    <!-- LoginActivity -->
+    <string name="login">로그인</string>
+    <string name="createAccount">회원가입</string>
+
+    <!-- CreateAccountActivity -->
+    <string name="createAccountCompleted">환영해요</string>
+    <string name="SignUp">Sign up</string>
+
+    <!-- findPassword -->
+    <string name="findPassword">비밀번호 찾기</string>
+
+    <!-- addInfo -->
+    <string name="addInfo">Add Info</string>
+    <string name="learn">배울래</string>
+    <string name="teach">알려줄래</string>
+    <string name="subjectSelection">과목 선택하기</string>
+    <string name="addStudentCard">학생증 추가하기</string>
+    <string name="entranceYear">입학년도</string>
+    <string name="accountNotice_1">- 햇볕이 들지 않는 그늘진 곳에서 촬영해주세요.</string>
+    <string name="accountNotice_2">- 학생증과 사진이 정면으로 보이게 촬영해주세요.</string>
+    <string name="accountInSchool">재학</string>
+    <string name="accountOffFromSchool">휴학</string>
+    <string name="accountNotice_3">- 학생증은 신분을 확인하는 용도로만 사용해요.</string>
+    <string name="accountNotice_4">- 신분 인증이 완료되어야 서비스를 이용하실 수 있어요.</string>
+    <string name="accountNotice_5">- 신분 인증은 최대 24시간(영업일 기준)이 소요될 수 있어요.</string>
+    <string name="accountSend">제출하기</string>
+
+    <!-- UserPermissionActivity -->
+    <string name="userPermissionActivity">신분 확인을 진행중입니다.\n심사가 끝나면 알려드릴게요!</string>
+
+
+</resources>

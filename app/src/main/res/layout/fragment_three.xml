@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/profileScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/profileCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <!-- 코드로 크기 정사각형 초기화-->
+            <ImageView
+                android:id="@+id/ImageThree"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/menprofile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/nameThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="인백기천"
+                android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/ImageThree"
+                app:layout_constraintTop_toBottomOf="@id/ImageThree"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/menred"
+                android:layout_marginLeft="6dp"
+                app:layout_constraintStart_toEndOf="@id/nameThree"
+                app:layout_constraintTop_toTopOf="@id/nameThree"
+                app:layout_constraintBottom_toBottomOf="@id/nameThree"/>
+
+            <TextView
+                android:id="@+id/editProfileThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"
+                android:fontFamily="@font/applesdgothicneom"
+                android:textSize="16dp"
+                android:layout_marginRight="20dp"
+                android:onClick="editProfileThree"
+                android:layout_margin="10dp"
+                android:textColor="#0067A3"
+                app:layout_constraintBottom_toBottomOf="@id/nameThree"
+                app:layout_constraintTop_toTopOf="@id/nameThree"
+                app:layout_constraintEnd_toEndOf="@id/ImageThree"/>
+
+            <TextView
+                android:id="@+id/ageThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="25세"
+                android:textSize="14sp"
+                android:textColor="#525252"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="@id/nameThree"
+                app:layout_constraintTop_toBottomOf="@id/nameThree"/>
+
+            <TextView
+                android:id="@+id/universityThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_mycolor_radius"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="학교"
+                app:layout_constraintStart_toStartOf="@id/ageThree"
+                app:layout_constraintTop_toBottomOf="@id/ageThree"/>
+
+            <ImageView
+                android:id="@+id/left_quote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/left_quote"
+                app:layout_constraintStart_toStartOf="@id/universityThree"
+                app:layout_constraintTop_toBottomOf="@id/universityThree"/>
+
+            <TextView
+                android:id="@+id/introductionThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="자기소개를 입력해주세요. \n \n \n "
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/left_quote"
+                app:layout_constraintTop_toBottomOf="@id/left_quote"
+                app:layout_constraintEnd_toStartOf="@id/right_quote"/>
+
+            <ImageView
+                android:id="@+id/right_quote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_quote"
+                app:layout_constraintEnd_toEndOf="@+id/editProfileThree"
+                app:layout_constraintTop_toBottomOf="@+id/introductionThree"/>
+
+
+            <LinearLayout
+                android:id="@+id/teachLinearThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/left_quote"
+                app:layout_constraintTop_toBottomOf="@+id/right_quote"
+                app:layout_constraintEnd_toStartOf="@id/right_quote">
+                <TextView
+                    android:id="@+id/teachThree"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="멘토"
+                    android:gravity="center"
+                    android:background="@color/MyColor"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="중국어"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="태권도"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="피아노"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/learnLinearThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/teachLinearThree"
+                app:layout_constraintStart_toStartOf="@+id/teachLinearThree"
+                app:layout_constraintEnd_toStartOf="@id/right_quote" >
+                <TextView
+                    android:id="@+id/learnThree"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="멘티"
+                    android:gravity="center"
+                    android:background="@color/MyColor"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"
+                    android:gravity="center"
+                    android:text="헬스"
+                    android:textColor="@color/darkGray" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="토익 스피킹"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="안드로이드 앱개발"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mateLinearThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/learnLinearThree"
+                app:layout_constraintStart_toStartOf="@+id/learnLinearThree"
+                app:layout_constraintEnd_toStartOf="@id/right_quote" >
+                <TextView
+                    android:id="@+id/mateThree"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="메이트"
+                    android:gravity="center"
+                    android:background="@drawable/mate_stroke_mycolor"
+                    android:textColor="@color/MyColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"
+                    android:gravity="center"
+                    android:text="홈런볼"
+                    android:textColor="@color/darkGray" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="더 노벰버"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="산책"
+                    android:gravity="center"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/edittext_stroke"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

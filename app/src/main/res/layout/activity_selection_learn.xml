@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/learnSelectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="배울래"
+        android:textColor="@color/MyColor"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/learnSelection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 배우고 싶은 과목 아이템 -->
+    <LinearLayout
+        android:id="@+id/learnSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/learnSelectionTitle"
+        app:layout_constraintStart_toStartOf="@id/learnSelectionTitle"
+        app:layout_constraintTop_toBottomOf="@id/learnSelectionTitle">
+        <!-- 아이템 1 -->
+        <LinearLayout
+            android:id="@+id/learnSelection1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="learnSelection1"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/learnSelectionTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="앱 안드로이드" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+        <!-- 아이템 2 -->
+        <LinearLayout
+            android:id="@+id/learnSelection2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="learnSelection2"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/learnSelectionTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="중국어" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+        <!-- 아이템 3 -->
+        <LinearLayout
+            android:id="@+id/learnSelection3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="learnSelection3"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/learnSelectionTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="영어" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/learnSelectionNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="최대 3개까지 선택 가능합니다."
+        app:layout_constraintBottom_toTopOf="@+id/learnSelectionGridView"
+        app:layout_constraintEnd_toEndOf="@id/learnSelectionTitle"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@id/learnSelectionTitle"
+        app:layout_constraintTop_toBottomOf="@id/learnSelection" />
+
+    <GridView
+        android:id="@+id/learnSelectionGridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:overScrollMode="never"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        app:layout_constraintBottom_toTopOf="@id/learnSelectionCheck"
+        app:layout_constraintEnd_toEndOf="@id/learnSelectionNotice"
+        app:layout_constraintStart_toStartOf="@id/learnSelectionNotice"
+        app:layout_constraintTop_toBottomOf="@id/learnSelectionNotice"
+        tools:listitem="@layout/item_learn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/learnSelectionCheck"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_mycolor_radius"
+        android:onClick="learnSelectionCheck"
+        android:text="선택하기"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/learnSelectionGridView"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_goneMarginTop="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/teachSelectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알려줄래"
+        android:textColor="@color/MyColor"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/applesdgothicneob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/teachSelection"/>
+
+    <!-- 배우고 싶은 과목 아이템 -->
+    <LinearLayout
+        android:id="@+id/teachSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/teachSelectionTitle"
+        app:layout_constraintStart_toStartOf="@id/teachSelectionTitle"
+        app:layout_constraintTop_toBottomOf="@id/teachSelectionTitle">
+        <!-- 아이템 1 -->
+        <LinearLayout
+            android:id="@+id/teachSelection1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="teachSelection1"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/teachSelectionTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="앱 안드로이드" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+        <!-- 아이템 2 -->
+        <LinearLayout
+            android:id="@+id/teachSelection2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="teachSelection2"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/teachSelectionTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="중국어" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+        <!-- 아이템 3 -->
+        <LinearLayout
+            android:id="@+id/teachSelection3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="teachSelection3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/teachSelectionTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selection"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                tools:text="영어" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/teachSelectionNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최대 3개까지 선택 가능합니다."
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="@+id/teachSelection"
+        app:layout_constraintEnd_toEndOf="@+id/teachSelection"
+        app:layout_constraintTop_toBottomOf="@+id/teachSelection"/>
+
+    <GridView
+        android:id="@+id/teachSelectionGridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:overScrollMode="never"
+        android:verticalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:columnWidth="100dp"
+        app:layout_constraintBottom_toTopOf="@id/teachSelectionCheck"
+        app:layout_constraintEnd_toEndOf="@id/teachSelectionNotice"
+        app:layout_constraintStart_toStartOf="@id/teachSelectionNotice"
+        app:layout_constraintTop_toBottomOf="@id/teachSelectionNotice"
+        tools:listitem="@layout/item_learn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teachSelectionCheck"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_mycolor_radius"
+        android:onClick="teachSelectionCheck"
+        android:text="선택하기"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/teachSelectionGridView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

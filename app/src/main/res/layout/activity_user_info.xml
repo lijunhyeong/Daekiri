@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/addInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="@string/addInfo"
+        android:textColor="@color/MyColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/userInfoScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/userInfoScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/userInfoCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addInfo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <!-- 닉네임 -->
+            <EditText
+                android:id="@+id/userNickName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_stroke"
+                android:hint="닉네임 (한글 또는 영문 2자 이상)"
+                android:padding="7dp"
+                android:singleLine = "true"
+                android:textColorHint="@color/darkGray"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 생년월일 -->
+            <TextView
+                android:id="@+id/userAge"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center|left"
+                android:onClick="userAge"
+                android:padding="7dp"
+                android:text="생년월일"
+                android:textColorHint="@color/darkGray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/userNickName" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                app:layout_constraintBottom_toBottomOf="@+id/userAge"
+                app:layout_constraintEnd_toEndOf="@+id/userAge"
+                app:layout_constraintTop_toTopOf="@+id/userAge" />
+
+            <!-- 성별 -->
+            <ImageView
+                android:id="@+id/userMale"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/mensilver"
+                android:onClick="userMale"
+                app:layout_constraintTop_toTopOf="@+id/userAge"
+                app:layout_constraintBottom_toBottomOf="@+id/userAge"
+                app:layout_constraintEnd_toStartOf="@id/userFemale"/>
+            <ImageView
+                android:id="@+id/userFemale"
+                app:icon="@drawable/womensilver"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:onClick="userFemale"
+                android:src="@drawable/womensilver"
+                app:layout_constraintEnd_toEndOf="@+id/userNickName"
+                app:layout_constraintTop_toTopOf="@+id/userAge"
+                app:layout_constraintBottom_toBottomOf="@+id/userAge" />
+
+            <!-- 배울래 -->
+            <TextView
+                android:id="@+id/userInfoLearn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/applesdgothicneob"
+                android:text="@string/learn"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userAge"
+                app:layout_constraintTop_toBottomOf="@+id/userAge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/applesdgothicneoeb"
+                android:onClick="learnSelection"
+                android:text="@string/subjectSelection"
+                android:textColor="#0067A3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoLearn"
+                app:layout_constraintEnd_toEndOf="@+id/userNickName"
+                tools:ignore="SmallSp" />
+
+            <!-- 배우고 싶은 과목 아이템 -->
+            <TextView
+                android:id="@+id/userInfoLearnItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/userInfoLearn"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoLearn"
+                tools:ignore="SmallSp"
+                tools:text="중국어"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoLearnItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/userInfoLearnItem1"
+                app:layout_constraintTop_toTopOf="@+id/userInfoLearnItem1"
+                tools:ignore="SmallSp"
+                tools:text="스피치"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoLearnItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/userInfoLearnItem2"
+                app:layout_constraintTop_toTopOf="@+id/userInfoLearnItem1"
+                tools:ignore="SmallSp"
+                tools:text="마케팅"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="300dp"
+                android:layout_height="2px"
+                android:layout_marginTop="8dp"
+                android:background="@color/lightGray"
+                app:layout_constraintEnd_toEndOf="@id/userNickName"
+                app:layout_constraintStart_toStartOf="@id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoLearnItem1" />
+
+            <!-- 가르쳐 줄 수 있는 과목 -->
+            <TextView
+                android:id="@+id/userInfoTeach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/applesdgothicneob"
+                android:text="@string/teach"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/applesdgothicneoeb"
+                android:onClick="teachSelection"
+                android:text="@string/subjectSelection"
+                android:textColor="#0067A3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoTeach"
+                app:layout_constraintEnd_toEndOf="@+id/userNickName" />
+            <!-- 배우고 싶은 과목 아이템 -->
+            <TextView
+                android:id="@+id/userInfoTeachItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/userInfoTeach"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoTeach"
+                tools:text="C++"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoTeachItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoTeachItem1"
+                app:layout_constraintStart_toEndOf="@+id/userInfoTeachItem1"
+                tools:text="패션"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoTeachItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoTeachItem1"
+                app:layout_constraintStart_toEndOf="@+id/userInfoTeachItem2"
+                tools:text="영어회화"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="300dp"
+                android:layout_height="2px"
+                android:layout_marginTop="8dp"
+                android:background="@color/lightGray"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@id/userNickName"
+                app:layout_constraintStart_toStartOf="@id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoTeachItem1" />
+
+            <!-- 같이 할래 -->
+            <TextView
+                android:id="@+id/userInfoMate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/applesdgothicneob"
+                android:text="같이할래"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/applesdgothicneoeb"
+                android:onClick="mateSelection"
+                android:text="@string/subjectSelection"
+                android:textColor="#0067A3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoMate"
+                app:layout_constraintEnd_toEndOf="@+id/userNickName" />
+
+            <TextView
+                android:id="@+id/userInfoMateItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/userInfoTeach"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoMate"
+                tools:text="C++"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoMateItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoMateItem1"
+                app:layout_constraintStart_toEndOf="@+id/userInfoMateItem1"
+                tools:text="패션"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userInfoMateItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/item_selection"
+                android:padding="5dp"
+                android:textColor="@color/MyColor"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/userInfoMateItem1"
+                app:layout_constraintStart_toEndOf="@+id/userInfoMateItem2"
+                tools:text="영어회화"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="300dp"
+                android:layout_height="2px"
+                android:layout_marginTop="8dp"
+                android:background="@color/lightGray"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@id/userNickName"
+                app:layout_constraintStart_toStartOf="@id/userNickName"
+                app:layout_constraintTop_toBottomOf="@+id/userInfoMateItem1" />
+
+            <!-- 학생증 추가 -->
+            <ImageView
+                android:id="@+id/studentCardImageView"
+                android:layout_width="300dp"
+                android:layout_height="211dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_stroke"
+                android:onClick="uploadStudentCard"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@id/userNickName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/userNickName"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="188dp"
+                android:text="+"
+                android:textColor="@color/MyColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/studentCardImageView"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/studentCardImageView"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addStudentCard"
+                android:textColor="@color/darkGray"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/studentCardImageView"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="@+id/studentCardImageView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <!-- Notice_1,2 -->
+            <TextView
+                android:id="@+id/accountNotice_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/applesdgothicneol"
+                android:text="@string/accountNotice_1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/studentCardImageView"
+                app:layout_constraintTop_toBottomOf="@id/studentCardImageView" />
+
+            <TextView
+                android:id="@+id/accountNotice_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/applesdgothicneol"
+                android:text="@string/accountNotice_2"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/accountNotice_1"
+                app:layout_constraintTop_toBottomOf="@id/accountNotice_1" />
+
+            <!-- 대학명 -->
+            <EditText
+                android:id="@+id/universityName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_stroke"
+                android:hint="대학명"
+                android:padding="7dp"
+                android:singleLine = "true"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/studentCardImageView"
+                app:layout_constraintStart_toStartOf="@id/studentCardImageView"
+                app:layout_constraintTop_toBottomOf="@id/accountNotice_2" />
+
+
+            <!-- 학과 -->
+            <EditText
+                android:id="@+id/majorName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_stroke"
+                android:hint="학과"
+                android:padding="7dp"
+                android:singleLine = "true"
+                android:textColorHint="@color/darkGray"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/universityName"
+                app:layout_constraintStart_toStartOf="@id/universityName"
+                app:layout_constraintTop_toBottomOf="@id/universityName" />
+
+
+            <!-- 입학년도 -->
+            <TextView
+                android:id="@+id/entranceYear"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_stroke"
+                android:gravity="center|left"
+                android:onClick="entranceYearButton"
+                android:padding="7dp"
+                android:text="@string/entranceYear"
+                android:textColorHint="@color/darkGray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/majorName"
+                app:layout_constraintTop_toBottomOf="@+id/majorName" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                app:layout_constraintBottom_toBottomOf="@+id/entranceYear"
+                app:layout_constraintEnd_toEndOf="@+id/entranceYear"
+                app:layout_constraintTop_toTopOf="@+id/entranceYear" />
+
+            <!-- 재학, 휴학 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/accountInSchool"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_stroke"
+                android:onClick="accountInSchool"
+                android:text="@string/accountInSchool"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/darkGray"
+                app:layout_constraintEnd_toStartOf="@id/accountOffFromSchool"
+                app:layout_constraintTop_toTopOf="@+id/entranceYear" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/accountOffFromSchool"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_stroke"
+                android:onClick="accountOffFromSchool"
+                android:text="@string/accountOffFromSchool"
+                android:textColor="@color/darkGray"
+                app:layout_constraintEnd_toEndOf="@+id/majorName"
+                app:layout_constraintTop_toTopOf="@+id/entranceYear" />
+
+
+            <!-- Notice_3,4,5 -->
+            <TextView
+                android:id="@+id/accountNotice_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/applesdgothicneol"
+                android:text="@string/accountNotice_3"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/entranceYear"
+                app:layout_constraintTop_toBottomOf="@id/entranceYear" />
+
+            <TextView
+                android:id="@+id/accountNotice_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/applesdgothicneol"
+                android:text="@string/accountNotice_4"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/accountNotice_3"
+                app:layout_constraintTop_toBottomOf="@id/accountNotice_3" />
+
+            <TextView
+                android:id="@+id/accountNotice_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/applesdgothicneol"
+                android:text="@string/accountNotice_5"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/accountNotice_4"
+                app:layout_constraintTop_toBottomOf="@id/accountNotice_4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/userInfoCheck"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_mycolor_radius"
+        android:onClick="userInfoCheck"
+        android:text="@string/accountSend"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userInfoScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
