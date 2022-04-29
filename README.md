@@ -1,4 +1,4 @@
-# 대끼리! [1](https://user-images.githubusercontent.com/72978589/165908649-c58d9d52-13e9-4acd-a846-92894d3f5756.JPG)    
+# 대끼리 ![1](https://user-images.githubusercontent.com/72978589/165908649-c58d9d52-13e9-4acd-a846-92894d3f5756.JPG)  
 #### 대학생 재능 교환 멘토, 멘티, 메이트 일대일 매칭 서비스
 ## 앱 소개
 
