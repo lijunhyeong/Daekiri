@@ -17,11 +17,11 @@
 * ###### 매칭된 이용자들이 각자 가진 재능을 교환하며 윈윈할 수 있는 친구 관계를 만드는 것이 대끼리의 목표입니다.  
 * ###### 위치, 성별, 관심 분야를 구체적으로 설정할수록 이용자는 자신에게 딱 맞는 유저를 추천 받을 수 있습니다.  
 * ###### 온라인에서 시작하여 오프라인으로 이어지는 관계들은 위드 로코나 시대 대학생들의 삶에 활력을 불어 넣어줄 것입니다. 위드 코로나 시대 대학생들의 새로운 만남의 장이 대끼리가 되길 기대합니다.  
-## :tada: 주요화면
+## :tada: [주요화면](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4)
 * ###### [회원가입시 정보입력](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#one-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%EC%8B%9C-%EC%A0%95%EB%B3%B4%EC%9E%85%EB%A0%A5)
-* ###### 배고싶은 과목(멘티) 최대 3개 선택 기능
-* ###### 알려주고 싶은 과목(멘토) 최대 3개 선택 기능
-* ###### 함께하고 싶은 과목 최대(메이트) 3개 선택 기능
-* ###### 메인화면(매칭뷰)
-* ###### 사용자 프로필
-* ###### 채팅목록
+* ###### [배고싶은 과목(멘티) 최대 3개 선택 기능](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#two-%EB%B0%B0%EA%B3%A0%EC%8B%B6%EC%9D%80-%EA%B3%BC%EB%AA%A9%EB%A9%98%ED%8B%B0-%EC%B5%9C%EB%8C%80-3%EA%B0%9C-%EC%84%A0%ED%83%9D-%EA%B8%B0%EB%8A%A5)
+* ###### [알려주고 싶은 과목(멘토) 최대 3개 선택 기능](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#three-%EC%95%8C%EB%A0%A4%EC%A3%BC%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B3%BC%EB%AA%A9%EB%A9%98%ED%86%A0-%EC%B5%9C%EB%8C%80-3%EA%B0%9C-%EC%84%A0%ED%83%9D-%EA%B8%B0%EB%8A%A5)
+* ###### [함께하고 싶은 과목 최대(메이트) 3개 선택 기능](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#four-%ED%95%A8%EA%BB%98%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B3%BC%EB%AA%A9-%EC%B5%9C%EB%8C%80%EB%A9%94%EC%9D%B4%ED%8A%B8-3%EA%B0%9C-%EC%84%A0%ED%83%9D-%EA%B8%B0%EB%8A%A5)
+* ###### [메인화면(매칭뷰)](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#five-%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%EB%A7%A4%EC%B9%AD%EB%B7%B0)
+* ###### [사용자 프로필](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#six-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84)
+* ###### [채팅목록](https://github.com/lijunhyeong/Daekiri/wiki/%EC%A3%BC%EC%9A%94%ED%99%94%EB%A9%B4#seven-%EC%B1%84%ED%8C%85%EB%AA%A9%EB%A1%9D)
