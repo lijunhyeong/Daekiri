@@ -1,4 +1,4 @@
-# <img src="![1](https://user-images.githubusercontent.com/72978589/165908649-c58d9d52-13e9-4acd-a846-92894d3f5756.JPG)" witdth="50" height="50"> 대끼리  
+<img src="![1](https://user-images.githubusercontent.com/72978589/165908649-c58d9d52-13e9-4acd-a846-92894d3f5756.JPG)" witdth="50" height="50"> # 대끼리  
 #### 대학생 재능 교환 멘토, 멘티, 메이트 일대일 매칭 서비스
 ## 앱 소개
 * ###### 앱명 '대끼리'는 '운이 매우 좋다'라는 의미를 가진 '대길(大吉)하다'에서 나온 사투리입니다.   
